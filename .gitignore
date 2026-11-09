@@ -11,3 +11,4 @@ next-env.d.ts
 *.tsbuildinfo
 *.zip
 .DS_Store
+docs

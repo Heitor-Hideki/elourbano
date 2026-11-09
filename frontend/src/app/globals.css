@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+/* Tokens do guia de estilo do design EloUrbano. */
+@theme {
+  --color-verde-50: #eef3e6;
+  --color-verde-500: #7fa04b;
+  --color-verde-700: #4a6620;
+  --color-verde-800: #33481a;
+
+  --color-fundo: #f2f2f0;
+  --color-superficie: #ffffff;
+  --color-muted: #f6f6f4;
+  --color-borda: #e0e0de;
+  --color-borda-forte: #8a8a88;
+  --color-texto: #1f1f1f;
+  --color-texto-2: #5c5c5a;
+  --color-texto-3: #3f3f3d;
+  --color-skeleton: #e3e3e1;
+
+  --color-perigo: #b3261e;
+  --color-perigo-50: #fcecea;
+  --color-foco: #1d5fa8;
+  --color-info-50: #eaf1fa;
+  --color-alerta: #8a5300;
+  --color-alerta-50: #fdf3e1;
+  --color-baixa: #4f4f4d;
+  --color-ia: #5b3fa0;
+  --color-analise: #5b3fa0;
+  --color-analise-50: #efeaf8;
+  --color-andamento: #0e6f75;
+  --color-andamento-50: #e3f1f1;
+
+  --radius-card: 20px;
+  --radius-modal: 28px;
+
+  --shadow-za-1: 0 1px 2px rgba(31, 31, 31, 0.08);
+  --shadow-za-2: 0 8px 24px rgba(31, 31, 31, 0.1);
+  --shadow-za-3: 0 24px 48px rgba(31, 31, 31, 0.18);
+}
+
+/* "inline": as variáveis do next/font só existem no body, então são resolvidas no elemento e não no :root. */
+@theme inline {
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-mono: var(--font-roboto-mono), ui-monospace, monospace;
+}
+
+@layer base {
+  body {
+    @apply bg-fundo font-sans text-texto antialiased;
+  }
+
+  a {
+    @apply text-verde-700 hover:text-verde-800;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  :focus-visible {
+    @apply outline-3 outline-offset-2 outline-foco;
+  }
+}
